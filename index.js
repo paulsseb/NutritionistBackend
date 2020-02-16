@@ -22,7 +22,7 @@ app.use(cors());
 InitiateMongoServer();
 
 // Setup server port
-const port = process.env.SERVER_PORT;
+const port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 // Send message for default URL
 app.get('/', (req, res) => res.send('Nutritionist Server API running'));
@@ -33,5 +33,5 @@ app.use('/pushNotificationApi', pushNotificationApi);
 
 // Launch app to listen to specified port
 app.listen(port, () => {
-  debug(`Running UG-OPS 2 on port ${port}`);
+  debug(`Nutritionist API running on port ${port}`);
 });
