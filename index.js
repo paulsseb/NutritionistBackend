@@ -34,4 +34,5 @@ app.use('/pushNotificationApi', pushNotificationApi);
 // Launch app to listen to specified port
 app.listen(port, () => {
   debug(`Nutritionist API running on port ${port}`);
+   console.log(`Nutritionist API running on port ${port}`));
 });
