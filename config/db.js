@@ -16,9 +16,9 @@ const InitiateMongoServer = async () => {
     await mongoose.connect(mongodb_connection_string, {
       useNewUrlParser: true
     });
-    debug('Connected to DB !!');
+   console.log('Connected to DB !!');
   } catch (e) {
-    debug(`Mongodb server not running.. ${e}`);
+    console.log(`Mongodb server not running.. ${e}`);
     throw e;
   }
 };
