@@ -22,7 +22,7 @@ app.use(cors());
 InitiateMongoServer();
 
 // Setup server port
-const port = 3040;
+const port = 8080;
 
 // Send message for default URL
 app.get('/', (req, res) => res.send('Nutritionist Server API running'));
