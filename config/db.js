@@ -7,8 +7,8 @@ const debug = require('debug')('server');
 // const mongodb_connection_string = 'mongodb://172.30.165.67:27017/nutritionist';
 
 // Connect to Mongodb
-const username = process.env.MONGO_DB_USERNAME || 'someUserName';
-const password = process.env.MONGO_DB_PASSWORD || 'somePassword';
+const username ='nutritionist';
+const password = 'secret123';
 
 const host = '172.30.165.67';
 const port = '27017';
