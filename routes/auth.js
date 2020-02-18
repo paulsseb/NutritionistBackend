@@ -54,7 +54,6 @@ router.post(
   authController.login
 );
 
-
 /**
  * @method - GET
  * @description - Get Users. authenticator is a middleware will be used to

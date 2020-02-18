@@ -24,7 +24,7 @@ const createNotification = async (req, res) => {
   } = req.body;
   try {
     const user = await User.findOne({
-      staffEmail
+      email: staffEmail
     });
     if (!user) {
       return res.status(400).json({
