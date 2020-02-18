@@ -3,7 +3,25 @@ const mongoose = require('mongoose');
 const debug = require('debug')('server');
 
 // provide a sensible default for local development
-const mongodb_connection_string = 'mongodb://172.30.165.67:27017/nutritionist';
+
+// const mongodb_connection_string = 'mongodb://172.30.165.67:27017/nutritionist';
+
+// Connect to Mongodb
+const username = process.env.MONGO_DB_USERNAME || 'someUserName';
+const password = process.env.MONGO_DB_PASSWORD || 'somePassword';
+
+const host = process.env.MONGODB_SERVICE_HOST || '172.30.165.67';
+const port = process.env.MONGODB_SERVICE_PORT || '27017';
+
+const database = process.env.MONGO_DB_DATABASE || 'nutritionist';
+console.log('---DATABASE PARAMETERS---');
+console.log(`Host: ${host}`);
+console.log(`Port: ${port}`);
+console.log(`Username: ${username}`);
+console.log(`Password: ${password}`);
+console.log(`Database: ${database}`);
+
+const mongodb_connection_string = `mongodb://${username}:${password}@${host}:${port}/${database}`;
 // const mongodb_connection_string = 'mongodb://localhost/nutritionist';
 // take advantage of openshift env vars when available:
 // if(process.env.OPENSHIFT_MONGODB_DB_URL){
