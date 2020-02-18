@@ -10,10 +10,10 @@ const debug = require('debug')('server');
 const username = process.env.MONGO_DB_USERNAME || 'someUserName';
 const password = process.env.MONGO_DB_PASSWORD || 'somePassword';
 
-const host = process.env.MONGODB_SERVICE_HOST || '172.30.165.67';
-const port = process.env.MONGODB_SERVICE_PORT || '27017';
+const host = '172.30.165.67';
+const port = '27017';
 
-const database = process.env.MONGO_DB_DATABASE || 'nutritionist';
+const database = 'nutritionist';
 console.log('---DATABASE PARAMETERS---');
 console.log(`Host: ${host}`);
 console.log(`Port: ${port}`);
