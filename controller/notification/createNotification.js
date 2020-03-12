@@ -20,11 +20,12 @@ const createNotification = async (req, res) => {
   const {
     title,
     message,
-    staffEmail
+    staffEmail,
+    datetimepicker
   } = req.body;
   try {
     const user = await User.findOne({
-      email: staffEmail
+      staffEmail
     });
     if (!user) {
       return res.status(400).json({
@@ -32,7 +33,7 @@ const createNotification = async (req, res) => {
       });
     }
     // code for pushing notification
-    handlePushTokens(message, title, user.expoPushNotificationToken);
+    handlePushTokens(message, title, datetimepicker, user.expoPushNotificationToken);
     res.status(200).json({
       message: 'Client has been remainded successfully'
     });

@@ -53,7 +53,7 @@ const registerUser = async (req, res) => {
       message: 'you have been registered'
     });
   } catch (err) {
-    console.log(err.message);
+    debug(err.message);
     res.status(500).json({ message: 'Error in Saving' });
   }
 };

@@ -26,7 +26,10 @@ router.post(
     check('message', 'Please Enter a message')
       .not()
       .isEmpty(),
-    check('staffEmail', 'Please Enter a Valid Email').isEmail()
+    check('staffEmail', 'Please Enter a Valid Email').isEmail(),
+    check('datetimepicker', 'Please Enter a Date')
+      .not()
+      .isEmpty()
   ],
   authenticator,
   notificationController.createNotification
