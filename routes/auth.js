@@ -64,4 +64,18 @@ router.post(
  */
 router.get('/getUsers', authenticator, authController.getUsers);
 
+/**
+ * @method - POST
+ * @param - /removeUser
+ * @description - User registration in the system
+ */
+router.post(
+  '/removeUser',
+  [
+    // input validations
+    check('email', 'Please enter a valid email').isEmail()
+  ],
+  authController.removeUser
+);
+
 module.exports = router;
