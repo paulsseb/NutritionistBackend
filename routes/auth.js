@@ -73,8 +73,8 @@ router.post(
   '/removeUser',
   [
     // input validations
-    check('email', authenticator, 'Please enter a valid email').isEmail()
-  ],
+    check('email', 'Please enter a valid email').isEmail()
+  ], authenticator,
   authController.removeUser
 );
 
