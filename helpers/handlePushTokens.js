@@ -2,7 +2,7 @@ const { Expo } = require('expo-server-sdk'); // to handle registering and sendin
 
 const expo = new Expo();
 
-const handlePushTokens = (message, title, token) => {
+const handlePushTokens = (message, title, datetimepicker, token) => {
   const notifications = [];
   if (!Expo.isExpoPushToken(token)) {
     console.error(`Push token ${token} is not a valid Expo push token`);
@@ -12,7 +12,7 @@ const handlePushTokens = (message, title, token) => {
     sound: 'default',
     title,
     body: message,
-    data: { message }
+    data: { message, datetimepicker }
   });
 
   const chunks = expo.chunkPushNotifications(notifications);
