@@ -4,25 +4,24 @@ const debug = require('debug')('server');
 
 // provide a sensible default for local development
 
-// const mongodb_connection_string = 'mongodb://172.30.165.67:27017/nutritionist';
 
 // Connect to Mongodb
-const username = 'nutritionist';
-const password = 'secret123';
+// const username = 'nutritionist';
+// const password = 'secret123';
 
-const host = '172.30.165.67';
-const port = '27017';
+// const host = '172.30.165.67';
+// const port = '27017';
 
-const database = 'nutritionist';
-console.log('---DATABASE PARAMETERS---');
-console.log(`Host: ${host}`);
-console.log(`Port: ${port}`);
-console.log(`Username: ${username}`);
-console.log(`Password: ${password}`);
-console.log(`Database: ${database}`);
+// const database = 'nutritionist';
+// console.log('---DATABASE PARAMETERS---');
+// console.log(`Host: ${host}`);
+// console.log(`Port: ${port}`);
+// console.log(`Username: ${username}`);
+// console.log(`Password: ${password}`);
+// console.log(`Database: ${database}`);
 
-const mongodb_connection_string = `mongodb://${username}:${password}@${host}:${port}/${database}`;
-// const mongodb_connection_string = 'mongodb://localhost/nutritionist';
+//const mongodb_connection_string = `mongodb://${username}:${password}@${host}:${port}/${database}`;
+  const mongodb_connection_string = 'mongodb://localhost/testing12';
 // take advantage of openshift env vars when available:
 // if(process.env.OPENSHIFT_MONGODB_DB_URL){
 // var mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + 'nutritionist';
