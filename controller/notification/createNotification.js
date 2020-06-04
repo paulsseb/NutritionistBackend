@@ -33,7 +33,7 @@ const createNotification = async (req, res) => {
       });
     }
     // code for pushing notification
-    handlePushTokens(message, title, datetimepicker, user.expoPushNotificationToken);
+    handlePushTokens(message, title, null, user.expoPushNotificationToken);
     console.log(datetimepicker);
     res.status(200).json({
       message: 'Client has been remainded successfully'
