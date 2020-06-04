@@ -23,6 +23,9 @@ const handlePushTokens = (message, title, datetimepicker, token) => {
         // eslint-disable-next-line no-await-in-loop
         const receipts = await expo.sendPushNotificationsAsync(chunk);
         console.log(receipts);
+        console.log({
+          message, title, datetimepicker, token
+        });
       } catch (error) {
         console.error(error);
       }
